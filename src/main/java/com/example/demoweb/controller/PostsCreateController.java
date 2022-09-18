@@ -23,7 +23,7 @@ public class PostsCreateController {
 
     @RequestMapping(path = "/new", method = RequestMethod.POST)
     public String doCreate(@ModelAttribute("text") String text) {
-        postsService.create(text, new Date());
+        postsService.create(null, text, new Date());
         return "redirect:/";
     }
 }
